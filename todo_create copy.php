@@ -8,7 +8,8 @@
 if (
   !isset($_POST['contact_day']) || $_POST['contact_day'] === '' ||
   !isset($_POST['contact_person']) || $_POST['contact_person'] === '' ||
-  // !isset($_POST['company']) || $_POST['company'] === '' ||
+  !isset($_POST['company_id']) || $_POST['company_id'] === '' ||
+  !isset($_POST['company']) || $_POST['company'] === '' ||
   !isset($_POST['customer_person']) || $_POST['customer_person'] === '' ||
   !isset($_POST['contact']) || $_POST['contact'] === ''
 ) {
@@ -19,7 +20,8 @@ if (
 
 $contact_day = $_POST['contact_day'];
 $contact_person = $_POST['contact_person'];
-// $company = $_POST['company'];
+$company = $_POST['company_id'];
+$company = $_POST['company'];
 $customer_person= $_POST['customer_person'];
 $contact = $_POST['contact'];
 
@@ -52,7 +54,8 @@ $stmt = $pdo->prepare($sql);
 // バインド変数を設定
 $stmt->bindValue(':contact_day', $contact_day, PDO::PARAM_STR);
 $stmt->bindValue(':contact_person', $contact_person, PDO::PARAM_STR);
-// $stmt->bindValue(':company', $company, PDO::PARAM_STR);
+$stmt->bindValue(':company_id', $company_id, PDO::PARAM_STR);
+$stmt->bindValue(':company', $company, PDO::PARAM_STR);
 $stmt->bindValue(':customer_person', $customer_person, PDO::PARAM_STR);
 $stmt->bindValue(':contact', $contact, PDO::PARAM_STR);
 

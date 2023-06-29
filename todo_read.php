@@ -52,6 +52,12 @@ foreach ($result as $record) {
       <td>{$record["company"]}</td>
       <td>{$record["customer_person"]}</td>
       <td>{$record["contact"]}</td>
+      <td>
+        <a href='todo_edit.php?id={$record["id"]}'>edit</a>
+      </td>
+      <td>
+        <a href='todo_delete.php?id={$record["id"]}'>delete</a>
+      </td>
     </tr>
   ";
 }

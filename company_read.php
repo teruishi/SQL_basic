@@ -49,14 +49,15 @@ foreach ($result as $record) {
       <td>{$record["name"]}</td>
       <td>{$record["address"]}</td>
       <td>{$record["tel"]}</td>
+      <td>
+        <a href='company_edit.php?id={$record["id"]}'>edit</a>
+      </td>
+      <td>
+        <a href='company_delete.php?id={$record["id"]}'>delete</a>
+      </td>
     </tr>
   ";
 }
-
-
-
-
-
 
 ?>
 
