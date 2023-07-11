@@ -1,5 +1,7 @@
 <?php
-
+include("functions.php");
+session_start();
+check_session_id();
 // DB接続
 // DB接続
 // todo_create.php
@@ -82,6 +84,7 @@ foreach ($result as $record) {
   <fieldset>
     <legend>顧客折衝履歴（一覧画面）</legend>
     <a href="todo_input.php">入力画面</a>
+    <a href="company_logout.php">ログアウト</a>
     <table>
       <thead>
         <tr>

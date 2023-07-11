@@ -41,22 +41,22 @@ $record = $stmt->fetch(PDO::FETCH_ASSOC);
       <legend>取引先企業一覧（編集画面）</legend>
       <a href="todo_read.php">一覧画面</a>
       <div>
-        name: <input type="date" name="contact_day" value="<?= $record['contact_day'] ?>">
+        訪問日: <input type="date" name="contact_day" value="<?= $record['contact_day'] ?>">
       </div>
       <div>
-        address: <input type="text" name="contact_person"value="<?= $record['contact_person'] ?>">
+        当方面談者: <input type="text" name="contact_person"value="<?= $record['contact_person'] ?>">
       </div>
       <div>
-        tel: <input type="text" name="company_id"value="<?= $record['company_id'] ?>">
+        取引先番号: <input type="text" name="company_id"value="<?= $record['company_id'] ?>">
       </div>
       <div>
-        tel: <input type="text" name="company"value="<?= $record['company'] ?>">
+        取引先名: <input type="text" name="company"value="<?= $record['company'] ?>">
       </div>
       <div>
-        tel: <input type="text" name="customer_person"value="<?= $record['customer_person'] ?>">
+        先方面談者: <input type="text" name="customer_person"value="<?= $record['customer_person'] ?>">
       </div>
       <div>
-        tel: <input type="text" name="contact"value="<?= $record['contact'] ?>">
+       折衝内容: <input type="text" name="contact"value="<?= $record['contact'] ?>">
       </div>
       <input type="hidden" name="id" value="<?= $record['id'] ?>">
       <div>
