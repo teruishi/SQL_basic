@@ -23,7 +23,8 @@ try {
 // SQL作成&実行
 // todo_read.php
 
-$sql = 'SELECT * FROM contact_table';
+// $sql = 'SELECT * FROM contact_table';
+$sql = 'SELECT * FROM contact_table LEFT OUTER JOIN company ON  contact_table.company_id = company.id';
 $stmt = $pdo->prepare($sql);
 
 try {
@@ -52,6 +53,7 @@ foreach ($result as $record) {
       <td>{$record["contact_person"]}</td>
       <td>{$record["company_id"]}</td>
       <td>{$record["company"]}</td>
+      <td>{$record["address"]}</td>
       <td>{$record["customer_person"]}</td>
       <td>{$record["contact"]}</td>
       <td>
@@ -92,6 +94,7 @@ foreach ($result as $record) {
           <th>contact_person</th>
           <th>company_id</th>
           <th>company</th>
+          <th>address</th>
           <th>customer_person</th>
           <th>contact</th>
         </tr>
